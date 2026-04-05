@@ -1,5 +1,3 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-
 const CROP_MOISTURE: Record<string, string> = {
   tomato: '70%',
   lettuce: '80%',
@@ -24,8 +22,8 @@ const CROP_MOISTURE: Record<string, string> = {
 };
 
 export default function handler(
-  request: VercelRequest,
-  response: VercelResponse
+  request: any,
+  response: any
 ) {
   const { crop } = request.query;
 
